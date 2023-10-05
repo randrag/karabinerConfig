@@ -4,7 +4,7 @@
         "check_for_updates_on_startup": true,
         "show_in_menu_bar": true,
         "show_profile_name_in_menu_bar": false,
-        "unsafe_ui": false
+        "unsafe_ui": true
     },
     "profiles": [
         {
@@ -465,7 +465,6 @@
                             }
                         ]
                     },
-
                     {
                         "description": "Colemak layout",
                         "manipulators": [
@@ -879,7 +878,6 @@
                             }
                         ]
                     },
-
                     {
                         "description": "§ to backspace",
                         "manipulators": [
@@ -890,6 +888,50 @@
                                 "to": [
                                     {
                                         "key_code": "delete_or_backspace"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "F18 to hyper-[ for window arrangement",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "f18"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "open_bracket",
+                                        "modifiers": [
+                                            "right_shift",
+                                            "right_command",
+                                            "right_control",
+                                            "right_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "F19 to hyper-] for window arrangement",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "f19"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "close_bracket",
+                                        "modifiers": [
+                                            "right_shift",
+                                            "right_command",
+                                            "right_control",
+                                            "right_option"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -1218,10 +1260,25 @@
                                         ]
                                     },
                                     {
+                                        "key_code": "spacebar",
+                                        "modifiers": [
+                                            "shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": [
+                                            "shift"
+                                        ]
+                                    },
+                                    {
                                         "key_code": "close_bracket",
                                         "modifiers": [
                                             "shift"
                                         ]
+                                    },
+                                    {
+                                        "key_code": "left_arrow"
                                     },
                                     {
                                         "key_code": "left_arrow"
