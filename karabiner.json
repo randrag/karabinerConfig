@@ -1,5 +1,6 @@
 {
     "global": {
+        "ask_for_confirmation_before_quitting": true,
         "check_for_updates_on_startup": true,
         "show_in_menu_bar": true,
         "show_profile_name_in_menu_bar": false,
@@ -16,22 +17,6 @@
                     "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
-                    {
-                        "description": "§ to backspace",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "non_us_backslash"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_or_backspace"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
                     {
                         "description": "Caps lock to hyper",
                         "manipulators": [
@@ -66,26 +51,6 @@
                     {
                         "description": "Hyper cursor keys in home position (based on qwerty)",
                         "manipulators": [
-                            {
-                                "description": "Colemak hyper-5 to F5",
-                                "from": {
-                                    "key_code": "5",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_command",
-                                            "right_shift",
-                                            "right_control",
-                                            "right_option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "f5"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
                             {
                                 "description": "Colemak hyper-8 to page up",
                                 "from": {
@@ -267,7 +232,7 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "Colemak hyper-quote to delete forward",
+                                "description": "Colemak hyper-quote to delete_forward",
                                 "from": {
                                     "key_code": "quote",
                                     "modifiers": {
@@ -327,7 +292,7 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "Colemak hyper-comma to mouse right click",
+                                "description": "Colemak hyper-period to mouse right click",
                                 "from": {
                                     "key_code": "period",
                                     "modifiers": {
@@ -389,7 +354,7 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "Colemak command hyper-u to shift up arrow",
+                                "description": "Colemak command hyper-u to shift-up arrow",
                                 "from": {
                                     "key_code": "i",
                                     "modifiers": {
@@ -411,7 +376,7 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "Colemak command hyper-y to shift end",
+                                "description": "Colemak command hyper-y to shift-end",
                                 "from": {
                                     "key_code": "o",
                                     "modifiers": {
@@ -433,7 +398,7 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "Colemak command hyper-n to shift left arrow",
+                                "description": "Colemak command hyper-n to shift-left_arrow",
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
@@ -455,7 +420,7 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "Colemak command hyper-e to shift down arrow",
+                                "description": "Colemak command hyper-e to shift-down_arrow",
                                 "from": {
                                     "key_code": "k",
                                     "modifiers": {
@@ -477,7 +442,7 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "Colemak command hyper-i to shift right arrow",
+                                "description": "Colemak command hyper-i to shift-right_arrow",
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": {
@@ -500,6 +465,7 @@
                             }
                         ]
                     },
+
                     {
                         "description": "Colemak layout",
                         "manipulators": [
@@ -913,6 +879,23 @@
                             }
                         ]
                     },
+
+                    {
+                        "description": "§ to backspace",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "non_us_backslash"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
                     {
                         "description": "SSMS on Jump to Rider mapping",
                         "manipulators": [
@@ -1054,7 +1037,7 @@
                         ]
                     },
                     {
-                        "description": "Cmd-shift > to F# forward pipe operator",
+                        "description": "Cmd-shift > to F# forward pipe operator (|>)",
                         "manipulators": [
                             {
                                 "from": {
@@ -1085,7 +1068,7 @@
                         ]
                     },
                     {
-                        "description": "Cmd-shift - to F# forward arrow operator",
+                        "description": "Cmd-shift - to F# forward arrow operator (->)",
                         "manipulators": [
                             {
                                 "from": {
@@ -1337,15 +1320,33 @@
                         ]
                     },
                     {
-                        "description": "F1 to escape",
+                        "description": "Cmd-shift-quote to double quote plus cursor movement",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "f1"
+                                    "key_code": "quote",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "escape"
+                                        "key_code": "quote",
+                                        "modifiers": [
+                                            "shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "quote",
+                                        "modifiers": [
+                                            "shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "left_arrow"
                                     }
                                 ],
                                 "type": "basic"
@@ -1353,7 +1354,7 @@
                         ]
                     },
                     {
-                        "description": "Right control to option (except Jump desktop)",
+                        "description": "Right control to option to make magic keyboard same as mac when skipping words with cursor keys (except Jump desktop)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1404,7 +1405,7 @@
                         ]
                     },
                     {
-                        "description": "Home to Command Left (except Jump desktop)",
+                        "description": "Home to Command-Left arrow to go to beginning of line (except Jump desktop)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1429,7 +1430,7 @@
                         ]
                     },
                     {
-                        "description": "End to Command Right (except Jump desktop)",
+                        "description": "End to Command-Right arrow to go to end of line (except Jump desktop)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1454,7 +1455,7 @@
                         ]
                     },
                     {
-                        "description": "Shift Home to Shift Command Left (except Jump desktop)",
+                        "description": "Shift-Home to Shift-Command-Left Arrow to mark up to beginning of line (except Jump desktop)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1487,7 +1488,7 @@
                         ]
                     },
                     {
-                        "description": "Shift End to Shift Command Right (except Jump desktop)",
+                        "description": "Shift-End to Shift-Command-Right Arrow to mark up to end of line (except Jump desktop)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1605,6 +1606,34 @@
                     "manipulate_caps_lock_led": true,
                     "simple_modifications": [],
                     "treat_as_built_in_keyboard": false
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 0,
+                        "vendor_id": 0
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": true,
+                    "simple_modifications": [],
+                    "treat_as_built_in_keyboard": false
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": false,
+                        "is_pointing_device": true,
+                        "product_id": 0,
+                        "vendor_id": 0
+                    },
+                    "ignore": true,
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": [],
+                    "treat_as_built_in_keyboard": false
                 }
             ],
             "fn_function_keys": [
@@ -1634,7 +1663,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "mission_control"
+                            "apple_vendor_keyboard_key_code": "mission_control"
                         }
                     ]
                 },
@@ -1644,7 +1673,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "launchpad"
+                            "apple_vendor_keyboard_key_code": "spotlight"
                         }
                     ]
                 },
@@ -1654,7 +1683,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "illumination_decrement"
+                            "consumer_key_code": "dictation"
                         }
                     ]
                 },
@@ -1664,7 +1693,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "illumination_increment"
+                            "key_code": "f6"
                         }
                     ]
                 },
@@ -1694,7 +1723,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "fastforward"
+                            "consumer_key_code": "fast_forward"
                         }
                     ]
                 },
