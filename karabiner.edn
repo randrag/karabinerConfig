@@ -1,0 +1,203 @@
+{
+ ;; Goku configuration for Karabiner-Elements
+ ;; Run `goku` to compile this to ~/.config/karabiner/karabiner.json
+
+ :profiles {:Goku {:default true}}
+
+ ;; Application identifiers for conditions
+ :applications {
+   :Parallels ["^com\\.parallels\\.desktop\\.console$"]
+   :Rider ["^com\\.jetbrains\\.rider$"]
+   :Jump ["^com\\.p5sys\\.jump\\.mac\\.viewer$"]
+   :JumpOrParallels ["^com\\.p5sys\\.jump\\.mac\\.viewer$"
+                     "^com\\.parallels\\.desktop\\.console$"]
+ }
+
+ ;; Templates for shell commands
+ :templates {
+   :open "open \"%s\""
+ }
+
+ ;; Modifier key reference:
+ ;; From side: C=left_cmd, T=left_ctrl, O=left_opt, S=left_shift
+ ;;            Q=right_cmd, W=right_ctrl, E=right_opt, R=right_shift
+ ;; ! = mandatory, # = optional, ## = optional any
+ ;; Hyper = !QWER (all right modifiers)
+
+ :main [
+   ;; ============================================================
+   ;; Caps lock to hyper (except Parallels)
+   ;; ============================================================
+   {:des "Caps lock to hyper"
+    :rules [[:##caps_lock {:key :right_shift
+                           :modi [:right_command :right_control :right_option]}
+             [:!Parallels]]]}
+
+   ;; ============================================================
+   ;; Hyper + m launches Things 3
+   ;; ============================================================
+   {:des "Hyper + m launches Things 3"
+    :rules [[:!QWERm [:open "/Applications/Things3.app"]]]}
+
+   ;; ============================================================
+   ;; Hyper cursor keys in home position (based on qwerty)
+   ;; Descriptions reference Colemak positions
+   ;; ============================================================
+   {:des "Hyper cursor keys in home position (based on qwerty)"
+    :rules [
+      ;; Basic navigation
+      [:!QWER8 :page_up]                      ; hyper-8 to page up
+      [:!QWERu :home]                         ; hyper-l to home (l is on u in qwerty)
+      [:!QWERi :up_arrow]                     ; hyper-u to up arrow
+      [:!QWERo :end]                          ; hyper-y to end
+      [:!QWERh :delete_or_backspace]          ; hyper-h to backspace
+      [:!QWERj :left_arrow]                   ; hyper-n to left arrow
+      [:!QWERk :down_arrow]                   ; hyper-e to down arrow
+      [:!QWERl :right_arrow]                  ; hyper-i to right arrow
+      [:!QWERsemicolon :escape]               ; hyper-o to escape for vim
+      [:!QWERquote :delete_forward]           ; hyper-quote to delete forward
+      [:!QWERn :return_or_enter]              ; hyper-k to enter
+      [:!QWERcomma :page_down]                ; hyper-comma to page down
+      [:!QWERperiod {:pointing_button :button2}] ; hyper-period to right click
+
+      ;; With left_command for shift+selection
+      [:!QWERCu {:key :home :modi [:shift]}]        ; cmd+hyper-l to shift-home
+      [:!QWERCi {:key :up_arrow :modi [:shift]}]    ; cmd+hyper-u to shift-up
+      [:!QWERCo {:key :end :modi [:shift]}]         ; cmd+hyper-y to shift-end
+      [:!QWERCj {:key :left_arrow :modi [:shift]}]  ; cmd+hyper-n to shift-left
+      [:!QWERCk {:key :down_arrow :modi [:shift]}]  ; cmd+hyper-e to shift-down
+      [:!QWERCl {:key :right_arrow :modi [:shift]}] ; cmd+hyper-i to shift-right
+    ]}
+
+   ;; ============================================================
+   ;; Colemak layout (QWERTY → Colemak remapping)
+   ;; ============================================================
+   {:des "Colemak layout"
+    :rules [
+      ;; Top row
+      [:##e :f]
+      [:##r :p]
+      [:##t :g]
+      [:##y :j]
+      [:##u :l]
+      [:##i :u]
+      [:##o :y]
+      [:##p :semicolon]
+      ;; Home row
+      [:##s :r]
+      [:##d :s]
+      [:##f :t]
+      [:##g :d]
+      [:##j :n]
+      [:##k :e]
+      [:##l :i]
+      [:##semicolon :o]
+      ;; Bottom row
+      [:##n :k]
+    ]}
+
+   ;; ============================================================
+   ;; § to backspace unless Rider
+   ;; ============================================================
+   {:des "§ to backspace unless Rider"
+    :rules [[:non_us_backslash :delete_or_backspace [:!Rider]]]}
+
+   ;; ============================================================
+   ;; Window arrangement keys
+   ;; ============================================================
+   {:des "F16 to hyper-[ for window arrangement"
+    :rules [[:f16 {:key :open_bracket
+                   :modi [:right_shift :right_command :right_control :right_option]}]]}
+
+   {:des "F19 to hyper-] for window arrangement"
+    :rules [[:f19 {:key :close_bracket
+                   :modi [:right_shift :right_command :right_control :right_option]}]]}
+
+   ;; ============================================================
+   ;; SSMS on Jump to Rider mapping (Jump Desktop only)
+   ;; ============================================================
+   {:des "SSMS on Jump to Rider mapping"
+    :rules [
+      ;; right_control to right_command in Jump
+      [:right_control :right_command [:Jump]]
+      ;; alt+ctrl+shift+arrow to alt+arrow (move line in SSMS → Rider)
+      [:!OTSup_arrow {:key :up_arrow :modi [:left_option]} [:Jump]]
+      [:!OTSdown_arrow {:key :down_arrow :modi [:left_option]} [:Jump]]
+      ;; ctrl+shift+arrow to alt+shift+arrow (select line in SSMS → Rider)
+      [:!TSup_arrow {:key :up_arrow :modi [:left_option :left_shift]} [:Jump]]
+      [:!TSdown_arrow {:key :down_arrow :modi [:left_option :left_shift]} [:Jump]]
+    ]}
+
+   ;; ============================================================
+   ;; F# operators
+   ;; ============================================================
+   {:des "Cmd-shift > to F# forward pipe operator (|>)"
+    :rules [[:!CSperiod [{:key :backslash :modi [:shift]}
+                         {:key :period :modi [:shift]}]]]}
+
+   {:des "Cmd-shift - to F# forward arrow operator (->)"
+    :rules [[:!CShyphen [:hyphen {:key :period :modi [:shift]}]]]}
+
+   ;; ============================================================
+   ;; Auto-pair brackets with cursor positioning
+   ;; ============================================================
+   {:des "Cmd-shift-9 to () plus cursor movement"
+    :rules [[:!CS9 [{:key :9 :modi [:shift]}
+                    {:key :0 :modi [:shift]}
+                    :left_arrow]]]}
+
+   {:des "Cmd-shift-backslash to || plus cursor movement"
+    :rules [[:!CSbackslash [{:key :backslash :modi [:shift]}
+                            {:key :backslash :modi [:shift]}
+                            :left_arrow]]]}
+
+   {:des "Cmd-shift-comma (<) to <> plus cursor movement"
+    :rules [[:!CScomma [{:key :comma :modi [:shift]}
+                        {:key :period :modi [:shift]}
+                        :left_arrow]]]}
+
+   ;; ============================================================
+   ;; Right control to option (Magic Keyboard word-skip fix)
+   ;; ============================================================
+   {:des "Right control to option to make magic keyboard same as mac when skipping words with cursor keys (except Jump desktop)"
+    :rules [
+      [:right_control :right_option [:!JumpOrParallels]]
+      [:!Sright_control {:key :right_option :modi [:shift]} [:!Jump]]
+    ]}
+
+   ;; ============================================================
+   ;; Home/End navigation (Mac-style line navigation)
+   ;; ============================================================
+   {:des "Home to Command-Left arrow to go to beginning of line (except Jump desktop)"
+    :rules [[:home {:key :left_arrow :modi [:command]} [:!JumpOrParallels]]]}
+
+   {:des "End to Command-Right arrow to go to end of line (except Jump desktop)"
+    :rules [[:end {:key :right_arrow :modi [:command]} [:!JumpOrParallels]]]}
+
+   {:des "Shift-Home to Shift-Command-Left Arrow to mark up to beginning of line (except Jump desktop)"
+    :rules [[:!Shome {:key :left_arrow :modi [:command :left_shift]} [:!JumpOrParallels]]]}
+
+   {:des "Shift-End to Shift-Command-Right Arrow to mark up to end of line (except Jump desktop)"
+    :rules [[:!Send {:key :right_arrow :modi [:command :left_shift]} [:!JumpOrParallels]]]}
+
+   ;; ============================================================
+   ;; Simple modification equivalent (keypad enter)
+   ;; ============================================================
+   {:des "Keypad enter to return"
+    :rules [[:keypad_enter :return_or_enter]]}
+ ]
+
+ ;; NOTE: The following settings are NOT generated by Goku and must be
+ ;; configured manually in Karabiner-Elements or added to the output JSON:
+ ;;
+ ;; Devices:
+ ;;   - Apple keyboard (vendor 76, product 620): manipulate_caps_lock_led: false
+ ;;   - Logitech mouse (vendor 1133, product 45108): ignore: false, mouse_flip_horizontal_wheel: true
+ ;;
+ ;; Virtual HID Keyboard:
+ ;;   - country_code: 0
+ ;;   - keyboard_type_v2: "ansi"
+ ;;
+ ;; Global:
+ ;;   - unsafe_ui: true
+}
