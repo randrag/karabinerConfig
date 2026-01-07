@@ -10,7 +10,6 @@ Karabiner-Elements configuration for macOS keyboard remapping, using Goku to gen
 
 - `karabiner.edn` - Goku source file (edit this)
 - `karabiner.json` - Current working config (manually maintained, reference for Goku migration)
-- `goku_target.json` - Snapshot of karabiner.json for comparing Goku output
 - `automatic_backups/` - Karabiner's automatic backups
 
 ## Running Goku
