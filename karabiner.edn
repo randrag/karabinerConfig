@@ -34,29 +34,29 @@
              [:!Parallels]]]}
 
    ;; ============================================================
-   ;; Hyper + m launches Things 3
+   ;; Hyper + t launches Things 3 (t is on qwerty f)
    ;; ============================================================
-   {:des "Hyper + m launches Things 3"
-    :rules [[:!QWERm [:open "/Applications/Things3.app"]]]}
+   {:des "Hyper + t launches Things 3"
+    :rules [[:!QWERf [:open "/Applications/Things3.app"]]]}
 
    ;; ============================================================
    ;; Hyper cursor keys in home position (based on qwerty)
    ;; Descriptions reference Colemak positions
    ;; ============================================================
-   {:des "Hyper cursor keys in home position (based on qwerty)"
+   {:des "Hyper cursor keys in home position"
     :rules [
       ;; Basic navigation
       [:!QWER8 :page_up]                      ; hyper-8 to page up
-      [:!QWERu :home]                         ; hyper-l to home (l is on u in qwerty)
-      [:!QWERi :up_arrow]                     ; hyper-u to up arrow
-      [:!QWERo :end]                          ; hyper-y to end
+      [:!QWERu :home]                         ; hyper-l to home (l is on qwerty u)
+      [:!QWERi :up_arrow]                     ; hyper-u to up (u is on qwerty i)
+      [:!QWERo :end]                          ; hyper-y to end (y is on qwerty o)
       [:!QWERh :delete_or_backspace]          ; hyper-h to backspace
-      [:!QWERj :left_arrow]                   ; hyper-n to left arrow
-      [:!QWERk :down_arrow]                   ; hyper-e to down arrow
-      [:!QWERl :right_arrow]                  ; hyper-i to right arrow
-      [:!QWERsemicolon :escape]               ; hyper-o to escape for vim
+      [:!QWERj :left_arrow]                   ; hyper-n to left (n is on qwerty j)
+      [:!QWERk :down_arrow]                   ; hyper-e to down (e is on qwerty k)
+      [:!QWERl :right_arrow]                  ; hyper-i to right (i is on qwerty l)
+      [:!QWERsemicolon :escape]               ; hyper-o to escape (o is on qwerty ;)
       [:!QWERquote :delete_forward]           ; hyper-quote to delete forward
-      [:!QWERn :return_or_enter]              ; hyper-k to enter
+      [:!QWERn :return_or_enter]              ; hyper-k to enter (k is on qwerty n)
       [:!QWERcomma :page_down]                ; hyper-comma to page down
       [:!QWERperiod {:pointing_button :button2}] ; hyper-period to right click
 
