@@ -107,6 +107,24 @@
     :rules [[:!QWERr [:osascript "/Users/roland/.config/karabiner/paste-date.scpt"]]]}
 
    ;; ============================================================
+   ;; Hyper + a opens Grok in Safari
+   ;; ============================================================
+   {:des "Hyper + a opens Grok"
+    :rules [[:!QWERa [:osascript "/Users/roland/.config/karabiner/open-grok.scpt"]]]}
+
+   ;; ============================================================
+   ;; Hyper + space launches iTerm
+   ;; ============================================================
+   {:des "Hyper + space launches iTerm"
+    :rules [[:!QWERspacebar [:open "/Applications/iTerm.app"]]]}
+
+   ;; ============================================================
+   ;; Hyper + ` launches Commander One
+   ;; ============================================================
+   {:des "Hyper + ` launches Commander One"
+    :rules [[:!QWERgrave_accent_and_tilde [:open "/Applications/Commander One.app"]]]}
+
+   ;; ============================================================
    ;; Hyper + 1 launches 1Password
    ;; ============================================================
    {:des "Hyper + 1 launches 1Password"
