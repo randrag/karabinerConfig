@@ -89,6 +89,24 @@
     :rules [[:!QWERv [:osascript "/Users/roland/.config/karabiner/open-dnumber.scpt"]]]}
 
    ;; ============================================================
+   ;; Hyper + g launches GitKraken (g is on qwerty t)
+   ;; ============================================================
+   {:des "Hyper + g launches GitKraken"
+    :rules [[:!QWERt [:open "/Applications/GitKraken.app"]]]}
+
+   ;; ============================================================
+   ;; Hyper + j launches Jump Desktop (j is on qwerty y)
+   ;; ============================================================
+   {:des "Hyper + j launches Jump Desktop"
+    :rules [[:!QWERy [:open "/Applications/Jump Desktop.app"]]]}
+
+   ;; ============================================================
+   ;; Hyper + p pastes current date (p is on qwerty r)
+   ;; ============================================================
+   {:des "Hyper + p pastes current date"
+    :rules [[:!QWERr [:osascript "/Users/roland/.config/karabiner/paste-date.scpt"]]]}
+
+   ;; ============================================================
    ;; Hyper + 1 launches 1Password
    ;; ============================================================
    {:des "Hyper + 1 launches 1Password"
