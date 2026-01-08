@@ -58,6 +58,104 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Hyper + r launches Rider",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "open \"/Applications/Rider.app\""
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Hyper + f opens Finder in home",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "e",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "open \"/Users/roland\""
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Hyper + d opens Downloads",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "g",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "open \"/Users/roland/Downloads\""
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Hyper + b launches Safari",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "b",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "open \"/Applications/Safari.app\""
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Hyper + x opens StockManager",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "x",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript \"/Users/roland/.config/karabiner/open-stockmanager.scpt\""
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Hyper + c opens work calendar",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript \"/Users/roland/.config/karabiner/open-calendar-work.scpt\""
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Hyper + v opens D-Number",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "v",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript \"/Users/roland/.config/karabiner/open-dnumber.scpt\""
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Hyper + 1 launches 1Password",
         "manipulators" : [ {
           "from" : {

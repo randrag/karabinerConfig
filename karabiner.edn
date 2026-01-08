@@ -47,6 +47,48 @@
     :rules [[:!QWERw [:open "/Applications/WhatsApp.app"]]]}
 
    ;; ============================================================
+   ;; Hyper + r launches Rider (r is on qwerty s)
+   ;; ============================================================
+   {:des "Hyper + r launches Rider"
+    :rules [[:!QWERs [:open "/Applications/Rider.app"]]]}
+
+   ;; ============================================================
+   ;; Hyper + f opens Finder in home folder (f is on qwerty e)
+   ;; ============================================================
+   {:des "Hyper + f opens Finder in home"
+    :rules [[:!QWERe [:open "/Users/roland"]]]}
+
+   ;; ============================================================
+   ;; Hyper + d opens Downloads folder (d is on qwerty g)
+   ;; ============================================================
+   {:des "Hyper + d opens Downloads"
+    :rules [[:!QWERg [:open "/Users/roland/Downloads"]]]}
+
+   ;; ============================================================
+   ;; Hyper + b launches Safari
+   ;; ============================================================
+   {:des "Hyper + b launches Safari"
+    :rules [[:!QWERb [:open "/Applications/Safari.app"]]]}
+
+   ;; ============================================================
+   ;; Hyper + x opens StockManager in Safari
+   ;; ============================================================
+   {:des "Hyper + x opens StockManager"
+    :rules [[:!QWERx [:osascript "/Users/roland/.config/karabiner/open-stockmanager.scpt"]]]}
+
+   ;; ============================================================
+   ;; Hyper + c opens work calendar in Safari
+   ;; ============================================================
+   {:des "Hyper + c opens work calendar"
+    :rules [[:!QWERc [:osascript "/Users/roland/.config/karabiner/open-calendar-work.scpt"]]]}
+
+   ;; ============================================================
+   ;; Hyper + v opens D-Number in Safari
+   ;; ============================================================
+   {:des "Hyper + v opens D-Number"
+    :rules [[:!QWERv [:osascript "/Users/roland/.config/karabiner/open-dnumber.scpt"]]]}
+
+   ;; ============================================================
    ;; Hyper + 1 launches 1Password
    ;; ============================================================
    {:des "Hyper + 1 launches 1Password"
