@@ -40,6 +40,12 @@
     :rules [[:!QWERf [:open "/Applications/Things3.app"]]]}
 
    ;; ============================================================
+   ;; Hyper + 1 launches 1Password
+   ;; ============================================================
+   {:des "Hyper + 1 launches 1Password"
+    :rules [[:!QWER1 [:open "/Applications/1Password.app"]]]}
+
+   ;; ============================================================
    ;; Hyper cursor keys in home position (based on qwerty)
    ;; Descriptions reference Colemak positions
    ;; ============================================================
