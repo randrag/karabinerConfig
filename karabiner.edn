@@ -2,7 +2,12 @@
  ;; Goku configuration for Karabiner-Elements
  ;; Run `goku` to compile this to ~/.config/karabiner/karabiner.json
 
- :profiles {:Goku {:default true}}
+ :profiles {:Goku {:default true
+                   :sim 50           ;; simultaneous threshold (default 50)
+                   :alone 500        ;; to_if_alone_timeout (default 1000)
+                   :delay 500        ;; delayed action delay (default 500)
+                   :held 500         ;; held down threshold (default 500)
+                   :simlayer-threshold 250}}
 
  ;; Application identifiers for conditions
  :applications {
@@ -25,54 +30,7 @@
  ;; ! = mandatory, # = optional, ## = optional any
  ;; Hyper = !QWER (all right modifiers)
 
- ;; Simlayers - hold key to activate layer, tap to type normally
- :simlayers {
-   :a-mode {:key :a}
-   :r-mode {:key :s}                     ; qwerty s = colemak r (word skip)
-   :s-mode {:key :d}                     ; qwerty d = colemak s (shift for selection)
- }
-
  :main [
-   ;; ============================================================
-   ;; A+R+S mode: shift+option+arrows for word selection (must be first)
-   ;; ============================================================
-   {:des "A+R+S mode shift+option+arrows for word selection"
-    :rules [
-      [:j {:key :left_arrow :modi [:left_option :shift]} [:a-mode :r-mode :s-mode]]  ; a+r+s+n → shift+opt+left
-      [:l {:key :right_arrow :modi [:left_option :shift]} [:a-mode :r-mode :s-mode]] ; a+r+s+i → shift+opt+right
-    ]}
-
-   ;; ============================================================
-   ;; A+S mode: shift+arrows for text selection (must be before a-mode)
-   ;; ============================================================
-   {:des "A+S mode shift+arrows for text selection"
-    :rules [
-      [:j {:key :left_arrow :modi [:shift]} [:a-mode :s-mode]]    ; a+s+n → shift+left
-      [:k {:key :down_arrow :modi [:shift]} [:a-mode :s-mode]]    ; a+s+e → shift+down
-      [:l {:key :right_arrow :modi [:shift]} [:a-mode :s-mode]]   ; a+s+i → shift+right
-      [:i {:key :up_arrow :modi [:shift]} [:a-mode :s-mode]]      ; a+s+u → shift+up
-    ]}
-
-   ;; ============================================================
-   ;; A+R mode: option+arrows for word skip (must be before a-mode)
-   ;; ============================================================
-   {:des "A+R mode option+arrows for word skip"
-    :rules [
-      [:j {:key :left_arrow :modi [:left_option]} [:a-mode :r-mode]]    ; a+r+n → opt+left (word left)
-      [:l {:key :right_arrow :modi [:left_option]} [:a-mode :r-mode]]   ; a+r+i → opt+right (word right)
-    ]}
-
-   ;; ============================================================
-   ;; A-mode: arrow keys on home row (hold a + neiu for arrows)
-   ;; Uses QWERTY physical keys: j=left, k=down, l=right, i=up
-   ;; ============================================================
-   {:des "A-mode arrow keys"
-    :rules [:a-mode
-      [:j :left_arrow]                   ; a+n (colemak) → left
-      [:k :down_arrow]                   ; a+e (colemak) → down
-      [:l :right_arrow]                  ; a+i (colemak) → right
-      [:i :up_arrow]                     ; a+u (colemak) → up
-    ]}
    ;; ============================================================
    ;; Caps lock to hyper (except Parallels)
    ;; ============================================================
