@@ -28,9 +28,19 @@
  ;; Simlayers - hold key to activate layer, tap to type normally
  :simlayers {
    :a-mode {:key :a}
+   :r-mode {:key :s}                     ; s = colemak r
  }
 
  :main [
+   ;; ============================================================
+   ;; A+R mode: control+arrows for word skip (must be before a-mode)
+   ;; ============================================================
+   {:des "A+R mode option+arrows for word skip"
+    :rules [
+      [:j {:key :left_arrow :modi [:left_option]} [:a-mode :r-mode]]    ; a+r+n → opt+left (word left)
+      [:l {:key :right_arrow :modi [:left_option]} [:a-mode :r-mode]]   ; a+r+i → opt+right (word right)
+    ]}
+
    ;; ============================================================
    ;; A-mode: arrow keys on home row (hold a + neiu for arrows)
    ;; Uses QWERTY physical keys: j=left, k=down, l=right, i=up
