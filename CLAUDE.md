@@ -9,8 +9,14 @@ Karabiner-Elements configuration for macOS keyboard remapping, using Goku to gen
 ## File Structure
 
 - `karabiner.edn` - Goku source file (edit this)
-- `karabiner.json` - Current working config (manually maintained, reference for Goku migration)
+- `karabiner.json` - Generated config (output from Goku)
+- `Layout.txt` - ASCII art keyboard layout showing all Hyper shortcuts (keep updated)
+- `*.scpt` - AppleScript files for Safari URL shortcuts and other scripts
 - `automatic_backups/` - Karabiner's automatic backups
+
+## Maintaining Layout.txt
+
+**Important:** When adding, removing, or modifying Hyper shortcuts in `karabiner.edn`, always update `Layout.txt` to reflect the changes. This file provides a visual reference of all keyboard shortcuts in Colemak layout format.
 
 ## Running Goku
 

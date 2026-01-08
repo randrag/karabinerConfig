@@ -1,0 +1,88 @@
+HYPER KEY SHORTCUTS (Colemak Layout)
+=====================================
+
+Hyper = Caps Lock (held) = Right Shift + Right Cmd + Right Ctrl + Right Option
+
+NUMBER ROW
+┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
+│    `    │    1    │    2    │    3    │    4    │    5    │    6    │    7    │    8    │    9    │    0    │    -    │    =    │
+│ Cmdr1   │ 1Pass   │ GChat   │ Gmail-W │ Gmail-P │ Drive-W │ Drive-P │         │         │         │         │         │         │
+└─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┘
+
+TOP ROW (Colemak: Q W F P G J L U Y ; [ ] \)
+┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
+│    Q    │    W    │    F    │    P    │    G    │    J    │    L    │    U    │    Y    │    ;    │    [    │    ]    │    \    │
+│         │WhatsApp │ Finder  │ PstDate │ GitKrkn │ Jump    │         │         │         │         │         │         │         │
+└─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┘
+
+HOME ROW (Colemak: A R S T D H N E I O ')
+┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
+│    A    │    R    │    S    │    T    │    D    │    H    │    N    │    E    │    I    │    O    │    '    │
+│  Grok   │  Rider  │         │ Things3 │ Downlds │         │         │         │         │         │         │
+└─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┘
+
+BOTTOM ROW (Colemak: Z X C V B K M , . /)
+┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
+│    Z    │    X    │    C    │    V    │    B    │    K    │    M    │    ,    │    .    │    /    │
+│         │StockMgr │Calendar │ D-Numbr │ Safari  │         │         │         │         │         │
+└─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┘
+
+SPACE BAR
+┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                           SPACE                                                   │
+│                                           iTerm                                                   │
+└───────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+A-MODE (Hold A + key) - Cursor Movement
+=======================================
+┌─────────┬─────────┬─────────┬─────────┐
+│    U    │    N    │    E    │    I    │
+│   Up    │  Left   │  Down   │  Right  │
+└─────────┴─────────┴─────────┴─────────┘
+
+A+S MODE (Hold A + S + key) - Text Selection
+============================================
+┌─────────┬─────────┬─────────┬─────────┐
+│    U    │    N    │    E    │    I    │
+│ Sel Up  │Sel Left │Sel Down │Sel Right│
+└─────────┴─────────┴─────────┴─────────┘
+
+A+R MODE (Hold A + R + key) - Word Skip
+=======================================
+┌─────────┬─────────┐
+│    N    │    I    │
+│Word Left│Word Rght│
+└─────────┴─────────┘
+
+A+R+S MODE (Hold A + R + S + key) - Word Selection
+==================================================
+┌─────────┬─────────┐
+│    N    │    I    │
+│Sel Word │Sel Word │
+│  Left   │  Right  │
+└─────────┴─────────┘
+
+
+LEGEND
+======
+Cmdr1    = Commander One
+1Pass    = 1Password
+GChat    = Google Chat
+Gmail-W  = Work Gmail
+Gmail-P  = Personal Gmail
+Drive-W  = Work Google Drive
+Drive-P  = Personal Google Drive
+WhatsApp = WhatsApp
+Finder   = Finder (home folder)
+PstDate  = Paste current date (YYYY-MM-DD)
+GitKrkn  = GitKraken
+Jump     = Jump Desktop
+Rider    = JetBrains Rider
+Things3  = Things 3
+Downlds  = Downloads folder
+StockMgr = StockManager
+Calendar = Work Calendar
+D-Numbr  = D-Number
+Safari   = Safari browser
+iTerm    = iTerm terminal

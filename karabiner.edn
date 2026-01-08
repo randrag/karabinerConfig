@@ -28,12 +28,33 @@
  ;; Simlayers - hold key to activate layer, tap to type normally
  :simlayers {
    :a-mode {:key :a}
-   :r-mode {:key :s}                     ; s = colemak r
+   :r-mode {:key :s}                     ; qwerty s = colemak r (word skip)
+   :s-mode {:key :d}                     ; qwerty d = colemak s (shift for selection)
  }
 
  :main [
    ;; ============================================================
-   ;; A+R mode: control+arrows for word skip (must be before a-mode)
+   ;; A+R+S mode: shift+option+arrows for word selection (must be first)
+   ;; ============================================================
+   {:des "A+R+S mode shift+option+arrows for word selection"
+    :rules [
+      [:j {:key :left_arrow :modi [:left_option :shift]} [:a-mode :r-mode :s-mode]]  ; a+r+s+n → shift+opt+left
+      [:l {:key :right_arrow :modi [:left_option :shift]} [:a-mode :r-mode :s-mode]] ; a+r+s+i → shift+opt+right
+    ]}
+
+   ;; ============================================================
+   ;; A+S mode: shift+arrows for text selection (must be before a-mode)
+   ;; ============================================================
+   {:des "A+S mode shift+arrows for text selection"
+    :rules [
+      [:j {:key :left_arrow :modi [:shift]} [:a-mode :s-mode]]    ; a+s+n → shift+left
+      [:k {:key :down_arrow :modi [:shift]} [:a-mode :s-mode]]    ; a+s+e → shift+down
+      [:l {:key :right_arrow :modi [:shift]} [:a-mode :s-mode]]   ; a+s+i → shift+right
+      [:i {:key :up_arrow :modi [:shift]} [:a-mode :s-mode]]      ; a+s+u → shift+up
+    ]}
+
+   ;; ============================================================
+   ;; A+R mode: option+arrows for word skip (must be before a-mode)
    ;; ============================================================
    {:des "A+R mode option+arrows for word skip"
     :rules [
@@ -185,36 +206,6 @@
    ;; ============================================================
    {:des "Hyper + 6 opens personal Google Drive"
     :rules [[:!QWER6 [:osascript "/Users/roland/.config/karabiner/open-google-drive-personal.scpt"]]]}
-
-   ;; ============================================================
-   ;; Hyper cursor keys in home position (based on qwerty)
-   ;; Descriptions reference Colemak positions
-   ;; ============================================================
-   {:des "Hyper cursor keys in home position"
-    :rules [
-      ;; Basic navigation
-      [:!QWER8 :page_up]                      ; hyper-8 to page up
-      [:!QWERu :home]                         ; hyper-l to home (l is on qwerty u)
-      [:!QWERi :up_arrow]                     ; hyper-u to up (u is on qwerty i)
-      [:!QWERo :end]                          ; hyper-y to end (y is on qwerty o)
-      [:!QWERh :delete_or_backspace]          ; hyper-h to backspace
-      [:!QWERj :left_arrow]                   ; hyper-n to left (n is on qwerty j)
-      [:!QWERk :down_arrow]                   ; hyper-e to down (e is on qwerty k)
-      [:!QWERl :right_arrow]                  ; hyper-i to right (i is on qwerty l)
-      [:!QWERsemicolon :escape]               ; hyper-o to escape (o is on qwerty ;)
-      [:!QWERquote :delete_forward]           ; hyper-quote to delete forward
-      [:!QWERn :return_or_enter]              ; hyper-k to enter (k is on qwerty n)
-      [:!QWERcomma :page_down]                ; hyper-comma to page down
-      [:!QWERperiod {:pointing_button :button2}] ; hyper-period to right click
-
-      ;; With left_command for shift+selection
-      [:!QWERCu {:key :home :modi [:shift]}]        ; cmd+hyper-l to shift-home
-      [:!QWERCi {:key :up_arrow :modi [:shift]}]    ; cmd+hyper-u to shift-up
-      [:!QWERCo {:key :end :modi [:shift]}]         ; cmd+hyper-y to shift-end
-      [:!QWERCj {:key :left_arrow :modi [:shift]}]  ; cmd+hyper-n to shift-left
-      [:!QWERCk {:key :down_arrow :modi [:shift]}]  ; cmd+hyper-e to shift-down
-      [:!QWERCl {:key :right_arrow :modi [:shift]}] ; cmd+hyper-i to shift-right
-    ]}
 
    ;; ============================================================
    ;; Colemak layout (QWERTY → Colemak remapping)
