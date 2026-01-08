@@ -16,6 +16,7 @@
  ;; Templates for shell commands
  :templates {
    :open "open \"%s\""
+   :osascript "osascript \"%s\""
  }
 
  ;; Modifier key reference:
@@ -44,6 +45,12 @@
    ;; ============================================================
    {:des "Hyper + 1 launches 1Password"
     :rules [[:!QWER1 [:open "/Applications/1Password.app"]]]}
+
+   ;; ============================================================
+   ;; Hyper + 2 opens Google Chat in Safari
+   ;; ============================================================
+   {:des "Hyper + 2 opens Google Chat"
+    :rules [[:!QWER2 [:osascript "/Users/roland/.config/karabiner/open-google-chat.scpt"]]]}
 
    ;; ============================================================
    ;; Hyper cursor keys in home position (based on qwerty)

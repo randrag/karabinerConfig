@@ -58,6 +58,20 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Hyper + 2 opens Google Chat",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "2",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript \"/Users/roland/.config/karabiner/open-google-chat.scpt\""
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Hyper cursor keys in home position",
         "manipulators" : [ {
           "from" : {
