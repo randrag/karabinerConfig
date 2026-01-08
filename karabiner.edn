@@ -41,6 +41,12 @@
     :rules [[:!QWERf [:open "/Applications/Things3.app"]]]}
 
    ;; ============================================================
+   ;; Hyper + w launches WhatsApp
+   ;; ============================================================
+   {:des "Hyper + w launches WhatsApp"
+    :rules [[:!QWERw [:open "/Applications/WhatsApp.app"]]]}
+
+   ;; ============================================================
    ;; Hyper + 1 launches 1Password
    ;; ============================================================
    {:des "Hyper + 1 launches 1Password"
@@ -51,6 +57,30 @@
    ;; ============================================================
    {:des "Hyper + 2 opens Google Chat"
     :rules [[:!QWER2 [:osascript "/Users/roland/.config/karabiner/open-google-chat.scpt"]]]}
+
+   ;; ============================================================
+   ;; Hyper + 3 opens work Gmail in Safari
+   ;; ============================================================
+   {:des "Hyper + 3 opens work Gmail"
+    :rules [[:!QWER3 [:osascript "/Users/roland/.config/karabiner/open-gmail-work.scpt"]]]}
+
+   ;; ============================================================
+   ;; Hyper + 4 opens personal Gmail in Safari
+   ;; ============================================================
+   {:des "Hyper + 4 opens personal Gmail"
+    :rules [[:!QWER4 [:osascript "/Users/roland/.config/karabiner/open-gmail-personal.scpt"]]]}
+
+   ;; ============================================================
+   ;; Hyper + 5 opens work Google Drive in Safari
+   ;; ============================================================
+   {:des "Hyper + 5 opens work Google Drive"
+    :rules [[:!QWER5 [:osascript "/Users/roland/.config/karabiner/open-google-drive-work.scpt"]]]}
+
+   ;; ============================================================
+   ;; Hyper + 6 opens personal Google Drive in Safari
+   ;; ============================================================
+   {:des "Hyper + 6 opens personal Google Drive"
+    :rules [[:!QWER6 [:osascript "/Users/roland/.config/karabiner/open-google-drive-personal.scpt"]]]}
 
    ;; ============================================================
    ;; Hyper cursor keys in home position (based on qwerty)

@@ -44,6 +44,20 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Hyper + w launches WhatsApp",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "w",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "open \"/Applications/WhatsApp.app\""
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Hyper + 1 launches 1Password",
         "manipulators" : [ {
           "from" : {
@@ -68,6 +82,62 @@
           },
           "to" : [ {
             "shell_command" : "osascript \"/Users/roland/.config/karabiner/open-google-chat.scpt\""
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Hyper + 3 opens work Gmail",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "3",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript \"/Users/roland/.config/karabiner/open-gmail-work.scpt\""
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Hyper + 4 opens personal Gmail",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "4",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript \"/Users/roland/.config/karabiner/open-gmail-personal.scpt\""
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Hyper + 5 opens work Google Drive",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "5",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript \"/Users/roland/.config/karabiner/open-google-drive-work.scpt\""
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Hyper + 6 opens personal Google Drive",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "6",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript \"/Users/roland/.config/karabiner/open-google-drive-personal.scpt\""
           } ],
           "type" : "basic"
         } ]
