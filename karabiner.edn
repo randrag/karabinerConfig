@@ -25,7 +25,23 @@
  ;; ! = mandatory, # = optional, ## = optional any
  ;; Hyper = !QWER (all right modifiers)
 
+ ;; Simlayers - hold key to activate layer, tap to type normally
+ :simlayers {
+   :a-mode {:key :a}
+ }
+
  :main [
+   ;; ============================================================
+   ;; A-mode: arrow keys on home row (hold a + neiu for arrows)
+   ;; Uses QWERTY physical keys: j=left, k=down, l=right, i=up
+   ;; ============================================================
+   {:des "A-mode arrow keys"
+    :rules [:a-mode
+      [:j :left_arrow]                   ; a+n (colemak) → left
+      [:k :down_arrow]                   ; a+e (colemak) → down
+      [:l :right_arrow]                  ; a+i (colemak) → right
+      [:i :up_arrow]                     ; a+u (colemak) → up
+    ]}
    ;; ============================================================
    ;; Caps lock to hyper (except Parallels)
    ;; ============================================================
