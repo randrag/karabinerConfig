@@ -166,6 +166,24 @@
     :rules [[:!QWER6 [:osascript "/Users/roland/.config/karabiner/open-google-drive-personal.scpt"]]]}
 
    ;; ============================================================
+   ;; Hyper + n/e/i/u for arrow keys (Colemak home row)
+   ;; n=left, e=down, i=right, u=up
+   ;; + Cmd for word skip (Option+arrow)
+   ;; ============================================================
+   {:des "Hyper + arrow keys (n/e/i/u)"
+    :rules [
+      [:!QWERj :left_arrow]   ; Hyper+n (qwerty j) → left
+      [:!QWERk :down_arrow]   ; Hyper+e (qwerty k) → down
+      [:!QWERl :right_arrow]  ; Hyper+i (qwerty l) → right
+      [:!QWERi :up_arrow]     ; Hyper+u (qwerty i) → up
+      ;; Hyper + Cmd for word skip (left/right) and document start/end (up/down)
+      [:!QWERCj {:key :left_arrow :modi [:left_option]}]    ; Hyper+Cmd+n → Option+left (word left)
+      [:!QWERCl {:key :right_arrow :modi [:left_option]}]   ; Hyper+Cmd+i → Option+right (word right)
+      [:!QWERCi {:key :up_arrow :modi [:left_command]}]     ; Hyper+Cmd+u → Cmd+up (doc start)
+      [:!QWERCk {:key :down_arrow :modi [:left_command]}]   ; Hyper+Cmd+e → Cmd+down (doc end)
+    ]}
+
+   ;; ============================================================
    ;; Colemak layout (QWERTY → Colemak remapping)
    ;; ============================================================
    {:des "Colemak layout"
