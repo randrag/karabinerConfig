@@ -172,15 +172,26 @@
    ;; ============================================================
    {:des "Hyper + arrow keys (n/e/i/u)"
     :rules [
+      ;; Basic arrows
       [:!QWERj :left_arrow]   ; Hyper+n (qwerty j) → left
       [:!QWERk :down_arrow]   ; Hyper+e (qwerty k) → down
       [:!QWERl :right_arrow]  ; Hyper+i (qwerty l) → right
       [:!QWERi :up_arrow]     ; Hyper+u (qwerty i) → up
+      ;; Hyper + Option for selection (Shift+arrow)
+      [:!QWEROj {:key :left_arrow :modi [:left_shift]}]     ; Hyper+Opt+n → Shift+left (select left)
+      [:!QWEROk {:key :down_arrow :modi [:left_shift]}]     ; Hyper+Opt+e → Shift+down (select down)
+      [:!QWEROl {:key :right_arrow :modi [:left_shift]}]    ; Hyper+Opt+i → Shift+right (select right)
+      [:!QWEROi {:key :up_arrow :modi [:left_shift]}]       ; Hyper+Opt+u → Shift+up (select up)
       ;; Hyper + Cmd for word skip (left/right) and document start/end (up/down)
       [:!QWERCj {:key :left_arrow :modi [:left_option]}]    ; Hyper+Cmd+n → Option+left (word left)
       [:!QWERCl {:key :right_arrow :modi [:left_option]}]   ; Hyper+Cmd+i → Option+right (word right)
       [:!QWERCi {:key :up_arrow :modi [:left_command]}]     ; Hyper+Cmd+u → Cmd+up (doc start)
       [:!QWERCk {:key :down_arrow :modi [:left_command]}]   ; Hyper+Cmd+e → Cmd+down (doc end)
+      ;; Hyper + Cmd + Option for selection with word/doc movement
+      [:!QWERCOj {:key :left_arrow :modi [:left_option :left_shift]}]    ; Hyper+Cmd+Opt+n → Shift+Option+left (select word left)
+      [:!QWERCOl {:key :right_arrow :modi [:left_option :left_shift]}]   ; Hyper+Cmd+Opt+i → Shift+Option+right (select word right)
+      [:!QWERCOi {:key :up_arrow :modi [:left_command :left_shift]}]     ; Hyper+Cmd+Opt+u → Shift+Cmd+up (select to doc start)
+      [:!QWERCOk {:key :down_arrow :modi [:left_command :left_shift]}]   ; Hyper+Cmd+Opt+e → Shift+Cmd+down (select to doc end)
     ]}
 
    ;; ============================================================

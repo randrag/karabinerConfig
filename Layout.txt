@@ -50,6 +50,16 @@ Hold Hyper + Left Cmd for extended navigation:
 └─────────┴─────────┴─────────┘
 
 
+HYPER + OPTION (Selection)
+==========================
+
+Add Left Option to any Hyper navigation to select text:
+
+  Hyper + Opt + n/e/i/u       → Select char by char
+  Hyper + Cmd + Opt + n/i     → Select word by word
+  Hyper + Cmd + Opt + u/e     → Select to doc start/end
+
+
 LEGEND
 ======
 Cmdr1    = Commander One
