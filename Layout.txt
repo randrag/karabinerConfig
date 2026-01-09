@@ -41,13 +41,16 @@ Hold Hyper + Left Cmd for extended navigation:
 
           ┌─────────┐
           │    U    │
-          │Doc Start│
-          │ (Cmd+↑) │
+          │ Page Up │
+          │         │
 ┌─────────┼────┬────┼─────────┐
 │    N    │    E    │    I    │
-│ Word ←  │ Doc End │ Word →  │
-│ (Opt+←) │ (Cmd+↓) │ (Opt+→) │
+│ Word ←  │Page Down│ Word →  │
+│ (Opt+←) │         │ (Opt+→) │
 └─────────┴─────────┴─────────┘
+
+In Things 3: U/E = Doc Start/End (Cmd+↑/↓) - Page Up/Down don't work,
+             and Doc Start/End allows quick navigation to task headings
 
 
 HYPER + OPTION (Selection)
@@ -57,7 +60,7 @@ Add Left Option to any Hyper navigation to select text:
 
   Hyper + Opt + n/e/i/u       → Select char by char
   Hyper + Cmd + Opt + n/i     → Select word by word
-  Hyper + Cmd + Opt + u/e     → Select to doc start/end
+  Hyper + Cmd + Opt + u/e     → Select page up/down (Things 3: doc start/end)
 
 
 LEGEND
