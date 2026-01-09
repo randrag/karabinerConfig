@@ -59,6 +59,9 @@ XDG_CONFIG_HOME=/Users/roland/code/karabinerConfig GOKU_EDN_CONFIG_FILE=/Users/r
 [:a {:key :b :modi [:shift]}]          ; a → shift+b
 [:a {:pointing_button :button2}]       ; a → right click
 [:a [:open "/path/to/app"]]            ; a → open application (shell command)
+[:a {:mkey {:vwheel -64}}]             ; a → scroll up (mouse wheel)
+[:a {:mkey {:vwheel 64}}]              ; a → scroll down (mouse wheel)
+[:a {:mkey {:x 100 :y 0}}]             ; a → move mouse right
 ```
 
 ### Key Gotchas
@@ -72,8 +75,8 @@ XDG_CONFIG_HOME=/Users/roland/code/karabinerConfig GOKU_EDN_CONFIG_FILE=/Users/r
 The config includes:
 - **Hyper key**: Caps Lock → right_shift + right_command + right_control + right_option (except Parallels)
 - **Colemak layout**: Full QWERTY→Colemak remapping
-- **Hyper + home row**: Arrow keys, navigation (j/k/l/; → arrows, u/o → home/end, 8/, → page up/down)
-- **Hyper + Cmd**: Shift-selection variants of navigation keys
+- **Hyper + n/e/i/u**: Arrow keys (left/down/right/up)
+- **Hyper + Cmd**: Word skip (left/right) and page up/down
 - **App-specific rules**: Exceptions for Parallels, Jump Desktop, Rider
 - **F# operators**: Cmd-Shift shortcuts for `|>`, `->`, `()`, `||`, `<>`
 - **Magic Keyboard fixes**: Right control → option, Home/End → Cmd+arrows
