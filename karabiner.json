@@ -72,7 +72,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Hyper + f opens Finder in home",
+        "description" : "Hyper + f focuses Finder or opens home",
         "manipulators" : [ {
           "from" : {
             "key_code" : "e",
@@ -81,7 +81,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "open \"/Users/roland\""
+            "shell_command" : "osascript \"/Users/roland/.config/karabiner/focus-finder.scpt\""
           } ],
           "type" : "basic"
         } ]

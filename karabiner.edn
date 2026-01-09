@@ -59,10 +59,10 @@
     :rules [[:!QWERs [:open "/Applications/Rider.app"]]]}
 
    ;; ============================================================
-   ;; Hyper + f opens Finder in home folder (f is on qwerty e)
+   ;; Hyper + f focuses Finder or opens home folder (f is on qwerty e)
    ;; ============================================================
-   {:des "Hyper + f opens Finder in home"
-    :rules [[:!QWERe [:open "/Users/roland"]]]}
+   {:des "Hyper + f focuses Finder or opens home"
+    :rules [[:!QWERe [:osascript "/Users/roland/.config/karabiner/focus-finder.scpt"]]]}
 
    ;; ============================================================
    ;; Hyper + d opens Downloads folder (d is on qwerty g)
