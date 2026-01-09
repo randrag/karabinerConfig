@@ -178,6 +178,9 @@
       [:!QWERk :down_arrow]   ; Hyper+e (qwerty k) → down
       [:!QWERl :right_arrow]  ; Hyper+i (qwerty l) → right
       [:!QWERi :up_arrow]     ; Hyper+u (qwerty i) → up
+      ;; Line start/end
+      [:!QWERu {:key :left_arrow :modi [:left_command]}]   ; Hyper+l (qwerty u) → Cmd+left (line start)
+      [:!QWERo {:key :right_arrow :modi [:left_command]}]  ; Hyper+y (qwerty o) → Cmd+right (line end)
       ;; Hyper + Option for selection (Shift+arrow)
       [:!QWEROj {:key :left_arrow :modi [:left_shift]}]     ; Hyper+Opt+n → Shift+left (select left)
       [:!QWEROk {:key :down_arrow :modi [:left_shift]}]     ; Hyper+Opt+e → Shift+down (select down)

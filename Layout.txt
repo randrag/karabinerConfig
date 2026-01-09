@@ -12,7 +12,7 @@ NUMBER ROW
 TOP ROW (Colemak: Q W F P G J L U Y ; [ ] \)
 ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
 │    Q    │    W    │    F    │    P    │    G    │    J    │    L    │    U    │    Y    │    ;    │    [    │    ]    │    \    │
-│         │WhatsApp │ Finder  │ PstDate │ GitKrkn │ Jump    │         │  ↑      │         │         │         │         │         │
+│         │WhatsApp │ Finder  │ PstDate │ GitKrkn │ Jump    │LineStart│  ↑      │ LineEnd │         │         │         │         │
 └─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┘
 
 HOME ROW (Colemak: A R S T D H N E I O ')
@@ -65,6 +65,8 @@ Add Left Option to any Hyper navigation to select text:
 
 LEGEND
 ======
+LineStart= Go to beginning of line (Cmd+←)
+LineEnd  = Go to end of line (Cmd+→)
 Cmdr1    = Commander One
 1Pass    = 1Password
 GChat    = Google Chat
