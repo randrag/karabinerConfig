@@ -16,16 +16,25 @@ Karabiner-Elements configuration for macOS keyboard remapping, using Goku to gen
 
 ## Maintaining Layout.txt
 
-**Important:** When adding, removing, or modifying Hyper shortcuts in `karabiner.edn`, always update `Layout.txt` to reflect the changes. This file provides a visual reference of all keyboard shortcuts in Colemak layout format.
+**Important:** When adding, removing, or modifying Hyper shortcuts in `karabiner.edn`, **always** update `Layout.txt` to reflect the changes. This file provides a visual reference of all keyboard shortcuts in Colemak layout format. Keeping this file in sync is mandatory for every shortcut change.
 
 ## Running Goku
 
-Goku by default reads from `~/.config/karabiner.edn` and writes to `~/.config/karabiner/karabiner.json`. To use files in this repo instead:
+Goku by default reads from `~/.config/karabiner.edn` (note: one level up from this directory) and writes to `~/.config/karabiner/karabiner.json`.
+
+**For this repo**, since the EDN file is at `~/.config/karabiner/karabiner.edn`, use:
 
 ```bash
-# Dry-run (output to stdout, doesn't modify files)
-GOKU_EDN_CONFIG_FILE=/Users/roland/code/karabinerConfig/karabiner.edn goku -d
+# Run Goku with correct path (use this command)
+GOKU_EDN_CONFIG_FILE=/Users/roland/.config/karabiner/karabiner.edn goku
 
+# Dry-run (output to stdout, doesn't modify files)
+GOKU_EDN_CONFIG_FILE=/Users/roland/.config/karabiner/karabiner.edn goku -d
+```
+
+For development in a separate directory:
+
+```bash
 # To actually write to a local karabiner.json, set up directory structure:
 mkdir -p /Users/roland/code/karabinerConfig/karabiner
 cp karabiner.json karabiner/karabiner.json

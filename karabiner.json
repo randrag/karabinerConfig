@@ -226,6 +226,20 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Hyper + quote to enter",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "quote",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "return_or_enter"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Hyper + ` launches Commander One",
         "manipulators" : [ {
           "from" : {

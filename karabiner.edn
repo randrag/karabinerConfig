@@ -125,6 +125,12 @@
     :rules [[:!QWERspacebar [:open "/Applications/iTerm.app"]]]}
 
    ;; ============================================================
+   ;; Hyper + quote to enter
+   ;; ============================================================
+   {:des "Hyper + quote to enter"
+    :rules [[:!QWERquote :return_or_enter]]}
+
+   ;; ============================================================
    ;; Hyper + ` launches Commander One
    ;; ============================================================
    {:des "Hyper + ` launches Commander One"
