@@ -178,6 +178,9 @@
       [:!QWERk :down_arrow]   ; Hyper+e (qwerty k) → down
       [:!QWERl :right_arrow]  ; Hyper+i (qwerty l) → right
       [:!QWERi :up_arrow]     ; Hyper+u (qwerty i) → up
+      ;; Delete keys
+      [:!QWERh :delete_or_backspace]  ; Hyper+h (qwerty h) → backspace
+      [:!QWERsemicolon :delete_forward]  ; Hyper+o (qwerty semicolon) → forward delete
       ;; Line start/end
       [:!QWERu {:key :left_arrow :modi [:left_command]}]   ; Hyper+l (qwerty u) → Cmd+left (line start)
       [:!QWERo {:key :right_arrow :modi [:left_command]}]  ; Hyper+y (qwerty o) → Cmd+right (line end)
