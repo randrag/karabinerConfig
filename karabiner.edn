@@ -125,6 +125,12 @@
     :rules [[:!QWERspacebar [:open "/Applications/iTerm.app"]]]}
 
    ;; ============================================================
+   ;; Cmd + § launches iTerm
+   ;; ============================================================
+   {:des "Cmd + § launches iTerm"
+    :rules [[:!Cnon_us_backslash [:open "/Applications/iTerm.app"]]]}
+
+   ;; ============================================================
    ;; Hyper + quote to enter
    ;; ============================================================
    {:des "Hyper + quote to enter"
