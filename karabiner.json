@@ -226,20 +226,6 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Cmd + § launches iTerm",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "non_us_backslash",
-            "modifiers" : {
-              "mandatory" : [ "left_command" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "open \"/Applications/iTerm.app\""
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
         "description" : "Hyper + quote to enter",
         "manipulators" : [ {
           "from" : {
