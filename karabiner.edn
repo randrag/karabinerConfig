@@ -119,10 +119,10 @@
     :rules [[:!QWERa [:osascript "/Users/roland/.config/karabiner/open-grok.scpt"]]]}
 
    ;; ============================================================
-   ;; Hyper + space launches iTerm
+   ;; Hyper + space launches Ghostty
    ;; ============================================================
-   {:des "Hyper + space launches iTerm"
-    :rules [[:!QWERspacebar [:open "/Applications/iTerm.app"]]]}
+   {:des "Hyper + space launches Ghostty"
+    :rules [[:!QWERspacebar [:open "/Applications/Ghostty.app"]]]}
 
 
    ;; ============================================================

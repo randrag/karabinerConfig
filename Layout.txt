@@ -30,7 +30,7 @@ BOTTOM ROW (Colemak: ` Z X C V B K M , . /)
 SPACE BAR
 ┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
 │                                           SPACE                                                   │
-│                                           iTerm                                                   │
+│                                           Ghostty                                                 │
 └───────────────────────────────────────────────────────────────────────────────────────────────────┘
 
 
@@ -86,4 +86,4 @@ StockMgr = StockManager
 Calendar = Work Calendar
 D-Numbr  = D-Number
 Safari   = Safari browser
-iTerm    = iTerm terminal
+Ghostty  = Ghostty terminal
